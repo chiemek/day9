@@ -1,0 +1,147 @@
+/* css reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* typography */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/* font-family: 'Poppins', sans-serif; */
+
+.color {
+  color: hsl(0, 78%, 62%);
+  color: hsl(180, 62%, 55%);
+  color: hsl(34, 97%, 64%);
+  color: hsl(212, 86%, 64%);
+  color: hsl(234, 12%, 34%);
+  color: hsl(229, 6%, 66%);
+  color: hsl(0, 0%, 98%);
+}
+
+body {
+  color: hsl(229, 6%, 66%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+main {
+  border: 1px solid black;
+  padding-block: 5rem;
+  padding-inline: 2rem;
+}
+
+main > header > p:first-child {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: hsl(240, 2%, 45%);
+  margin-bottom: 1rem;
+}
+
+main > header > p:nth-child(2) {
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+main > header > p:last-child {
+  text-align: center;
+  margin-bottom: 5rem;
+  line-height: 1.5rem;
+}
+
+article > div {
+  border-top: 3px solid hsl(180, 62%, 55%);
+  /* height: 13rem; */
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+article > div:nth-child(2) {
+  border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+article > div:nth-child(3) {
+  border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+article > div:last-child {
+  border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+article > div > p:first-child {
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+article > div > p:nth-child(2) {
+  font-size: 13px;
+  margin-bottom: 2rem;
+}
+
+article > div > img {
+  height: 3rem;
+  margin-left: 80%;
+}
+
+@media (min-width: 1000px) {
+  main {
+    padding-inline: 10rem;
+  }
+
+  main > header > p:first-child {
+    font-size: 1.5rem;
+  }
+  main > header > p:nth-child(2) {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+  main > header > p:last-child {
+    width: 30rem;
+    font-size: 1rem;
+    margin-inline: auto;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 2rem;
+    justify-content: center;
+  }
+
+  .first {
+    grid-row: span 2;
+    margin-block: 12rem;
+  }
+
+  .third {
+    grid-column: -3 / -2;
+  }
+
+  .four {
+    grid-column: 3 / 4;
+    grid-row: -3 / span 2;
+    margin-block: 12rem;
+  }
+
+  article > div {
+    padding: 2rem;
+  }
+  article > div > p:nth-child(2) {
+    width: 15rem;
+  }
+
+  article > div > img {
+    height: 3rem;
+    margin-left: 80%;
+    margin-top: 20%;
+  }
+}
